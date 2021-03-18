@@ -62,7 +62,9 @@ button{
   justify-content: center;
   background-color:   #fcf7e6;
   padding: 2vh 0;
-
+  border-top:  solid 1px #eeeeee;
+  border-right:  solid 1px #eeeeee;
+  border-left:  solid 1px #eeeeee;
 
   p{
     font-size: 7rem;
@@ -97,6 +99,9 @@ button{
   justify-content: space-around;
   padding: 2vh 0;
   height: 15vh;
+  border-left:  solid 1px #eeeeee;
+  border-right:  solid 1px #eeeeee;
+  border-bottom:  solid 1px #eeeeee;
 
   .countContentCenter{
     p{
@@ -131,6 +136,7 @@ button{
   background-color:  #EEF9FF;
   height: 45vh;
   padding: 2vh 0;
+  border:  solid 1px #eeeeee;
   
   #tournamentName{
     display: block;

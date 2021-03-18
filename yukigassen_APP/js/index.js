@@ -260,7 +260,7 @@ $(function(){
     })
 
     $('#opponentTeamName').on('change', function(){
-      names['opponentTeamName'] = $('#tournamentName').val()
+      names['opponentTeamName'] = $('#opponentTeamName').val()
     })
 
   // ----------------------------------------------------

@@ -145,21 +145,25 @@ function dbConnect(){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>RESULT</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/result.css">
 </head>
 <body>
-  
-
+  <section id='header'>
+    <h1>YUKIGASSEN TIMER APP</h1>
+  </section>
+  <main>
   <section id='gameResultArea'>
   <h1>試合結果</h1>
+  <h2><?php echo $tournamentName;?></h2>
   <table>
       <tr>
-        <th>チーム名</th>
+        <th><?php echo $myTeamName;?></th>
         <th>VS</th>
-        <th>チーム名</th>
+        <th><?php echo $opponentTeamName;?></th>
       </tr>
       <tr id='firstSetResult' class=''>
         <td class='myResult'><?php echo $firstSetMyCount;?></td>
@@ -190,40 +194,47 @@ function dbConnect(){
   </section>
   <section id='timeLineArea'>
     <h1>タイムライン</h1>
-    <?php foreach($result as $column): ?>
-      <table>
-        <h2><?php echo $column['tournamentName']?></h2>
-        <tr>
-          <td><?php echo $column['myTeamName']?></td>
-          <td>VS</td>
-          <td><?php echo $column['opponentTeamName']?></td>
-        </tr>
-        <tr>
-          <td><?php echo $column['firstSetMyCount']?></td>
-          <td>FIRST SET</td>
-          <td><?php echo $column['firstSetOpponentCount']?></td>
-        </tr>
-        <tr>
-          <td><?php echo $column['secondSetMyCount']?></td>
-          <td>SECOND SET</td>
-          <td><?php echo $column['secondSetOpponentCount']?></td>
-        </tr>
-        <tr>
-          <td><?php echo $column['thirdSetMyCount']?></td>
-          <td>THIRD SET</td>
-          <td><?php echo $column['thirdSetOpponentCount']?></td>
-        </tr>
-        <tr>
-          <td><?php echo $column['totalSetMyCount']?></td>
-          <td>TOTAL SCORE</td>
-          <td><?php echo $column['totalSetOpponentCount']?></td>
-        </tr>
-      </table>
-    <?php endforeach; ?>
+    <div id='timelineContents'>
+      <?php foreach($result as $column): ?>
+        <div class="timelineContent">
+          <table>
+            <h2><?php echo $column['tournamentName']?></h2>
+            <tr>
+              <td><?php echo $column['myTeamName']?></td>
+              <td>VS</td>
+              <td><?php echo $column['opponentTeamName']?></td>
+            </tr>
+            <tr>
+              <td><?php echo $column['firstSetMyCount']?></td>
+              <td>FIRST SET</td>
+              <td><?php echo $column['firstSetOpponentCount']?></td>
+            </tr>
+            <tr>
+              <td><?php echo $column['secondSetMyCount']?></td>
+              <td>SECOND SET</td>
+              <td><?php echo $column['secondSetOpponentCount']?></td>
+            </tr>
+            <tr>
+              <td><?php echo $column['thirdSetMyCount']?></td>
+              <td>THIRD SET</td>
+              <td><?php echo $column['thirdSetOpponentCount']?></td>
+            </tr>
+            <tr>
+              <td><?php echo $column['totalSetMyCount']?></td>
+              <td>TOTAL SCORE</td>
+              <td><?php echo $column['totalSetOpponentCount']?></td>
+            </tr>
+          </table>
+          </div> 
+        <?php endforeach; ?>
+       
+    </div>
+    
   </section>
-
-
-  <p><button id='nextGame'></button></p>
+  </main>
+  <section id='nextGame'>
+    <p><button id='nextGameBtn'>NEXT GAME</button></p>   
+  </section>  
 
 <script>
 $(function(){
