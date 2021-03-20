@@ -21,13 +21,13 @@
   </section>
   <main>
   <section id='timer'>
-    <div><button id='timerStart' class='timerStart'></button></div>
+    <div class='timerBtnContainer'><button id='timerStart' class='timerStart'></button></div>
     <p id='gameTimer'></p>
-    <div><button id='timerReset'>リセット</button></div>
+    <div class='timerBtnContainer'><button id='timerReset'>リセット</button></div>
   </section>
   
   <section id="count">
-    <div class="countContentLef countItem">
+    <div class="countContentLeft countItem">
       <p><button id='myCountPlus'>+</button></p>
       <h2 id="displayMyCount"></h2>
       <p><button id='myCountMinus'>-</button></p>

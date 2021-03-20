@@ -86,6 +86,17 @@ button:focus {
   font-size: 7rem;
   text-align: center;
   margin-top: 0px;
+  width: 25%;
+}
+
+#timer .timerBtnContainer {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #timer button {
@@ -124,8 +135,38 @@ button:focus {
   border-bottom: solid 1px #eeeeee;
 }
 
+#count .countContentCenter {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #count .countContentCenter p {
   font-size: 5rem;
+}
+
+#count .countContentLeft {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#count .countContentRight {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #count .countItem {

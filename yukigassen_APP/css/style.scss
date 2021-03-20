@@ -70,7 +70,14 @@ button{
     font-size: 7rem;
     text-align: center;
     margin-top: 0px;
+    width: 25%
   };
+
+  .timerBtnContainer{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
 
   button{
     border-radius: 50%;
@@ -104,9 +111,24 @@ button{
   border-bottom:  solid 1px #eeeeee;
 
   .countContentCenter{
+    width: 33%;
+    display: flex;
+    justify-content: center;
     p{
       font-size: 5rem;
     }
+  };
+
+  .countContentLeft{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .countContentRight{
+    width: 33%;
+    display: flex;
+    justify-content: center;
   }
 
   .countItem{
